@@ -56,3 +56,87 @@ body {
     }
   }
 }
+
+.language-btn {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Для мобильных устройств делаем кнопки меньше */
+@media (max-width: 768px) {
+  .language-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+.bgForBlock {
+  background-color: var(--box-bg);
+  .imgStyle {
+    mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+#block2 {
+  position: relative;
+  gap: 3.5%;
+  @media (max-width: 1300px) {
+    gap: 4%;
+  }
+  #block2Sign {
+    position: absolute;
+    top: -100px;
+    opacity: 0;
+    left: 0;
+  }
+  .block2child {
+    width: 31%;
+    margin-bottom: 4vh;
+    @media (max-width: 1300px) {
+      width: 48%;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
+
+/* Стили для выпадающего списка языков */
+#language-selector {
+  z-index: 1000;
+}
+
+#language-dropdown-menu {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+#language-dropdown-menu.show {
+  display: block;
+}
+
+.language-option {
+  transition: background-color 0.2s ease;
+}
+
+.language-option:hover {
+  background-color: #f3f4f6 !important;
+}

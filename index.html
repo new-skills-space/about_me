@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:url" content="http://descloud.ru/main.html" />
-    <meta
-      property="og:title"
-      content="Olena Sidelnikova"
-    />
+    <meta property="og:title" content="Olena Sidelnikova" />
     <meta
       property="og:description"
       content="Наставниця – Викладачка з міжнародним досвідом роботи"
     />
     <meta property="og:image" content="./img/ava.jpg" />
-    <title>New skills space</title>
+    <meta http-equiv="Content-Language" content="uk" />
+    <meta name="language" content="Ukrainian" />
+    <title>New skills space | Olena Sidelnikova</title>
 
     <!-- Подключаем стили Flowbite через CDN -->
     <link
@@ -21,13 +20,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Подключаем стили Tailwind CSS через CDN (если еще не подключены) -->
+    <!-- Подключаем стили Tailwind CSS через CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/script.js" defer></script>
   </head>
   <body>
+    <!-- Навигация -->
     <nav
-      class="bg-gray-100 border-gray-300 dark:bg-gray-100 fixed top-0 w-[100vw]"
+      class="bg-gray-100 border-gray-300 dark:bg-gray-100 fixed top-0 w-[100vw] z-50"
       id="fixed-element"
     >
       <div class="py-4 max-w-[1000px] mx-[5vw] lg:mx-auto">
@@ -37,8 +37,76 @@
           <a
             href="#"
             class="block py-2 px-3 md:border-0 md:hover:text-gray-200 md:mr-5 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200"
-            ><h1 class="text-xl">Olena Sidelnikova</h1></a
           >
+            <h1 class="text-xl">Olena Sidelnikova</h1>
+          </a>
+
+          <!-- Кнопки перевода языков -->
+          <div class="relative order-1 md:order-2" id="language-selector">
+            <!-- Кнопка выпадающего списка -->
+            <button
+              id="language-dropdown-button"
+              class="flex items-center px-3 py-2 text-sm font-medium text-gray-900 bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 focus:ring-2 focus:outline-none focus:ring-gray-300 dark:bg-gray-100 dark:border-gray-300 dark:text-black dark:hover:bg-gray-200"
+              type="button"
+            >
+              <span id="current-language" class="mr-2">🇺🇦 UK</span>
+              <svg
+                class="w-2.5 h-2.5 ms-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+
+            <!-- Выпадающее меню (только флаги и аббревиатуры) -->
+            <div
+              id="language-dropdown-menu"
+              class="absolute z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-100 mt-1 right-0 w-auto min-w-[60px]"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-700 px-1"
+                aria-labelledby="language-dropdown-button"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="language-option flex items-center px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 dark:text-black rounded-sm"
+                    data-lang="uk"
+                  >
+                    <span>UK</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="language-option flex items-center px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 dark:text-black rounded-sm"
+                    data-lang="ru"
+                  >
+                    <span>RU</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="language-option flex items-center px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-200 dark:text-black rounded-sm"
+                    data-lang="en"
+                  >
+                    <span>EN</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -63,6 +131,7 @@
               />
             </svg>
           </button>
+
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul
               class="font-medium flex flex-col items-center md:gap-5 lg:gap-10 md:p-0 bg-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-100 dark:bg-gray-100 md:dark:bg-gray-100 dark:border-gray-300"
@@ -70,7 +139,8 @@
               <li>
                 <a
                   href="#block2Sign"
-                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-200 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200"
+                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-200 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200 translate"
+                  data-key="services"
                   aria-current="page"
                   >Послуги</a
                 >
@@ -78,21 +148,24 @@
               <li>
                 <a
                   href="#block3"
-                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-200 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200"
+                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-200 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200 translate"
+                  data-key="about"
                   >Про мене</a
                 >
               </li>
               <li>
                 <a
                   href="#block4"
-                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-200 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200"
+                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-200 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200 translate"
+                  data-key="education"
                   >Освіта і досвід</a
                 >
               </li>
               <li>
                 <a
                   href="#block5"
-                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-500 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-500"
+                  class="block py-2 px-3 text-gray-900 rounded-sm md:border-0 md:hover:text-gray-500 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-500 translate"
+                  data-key="contacts"
                   >Мої контакти</a
                 >
               </li>
@@ -103,6 +176,7 @@
     </nav>
 
     <main class="flex flex-col my-[20vh] lg:my-[15vh]">
+      <!-- Блок 1: Приветствие -->
       <section
         id="block1"
         class="flex flex-col md:flex-row gap-5 rounded-lg p-5 max-w-[1000px] bgForBlock mx-[5vw] lg:mx-auto"
@@ -110,39 +184,47 @@
         <div
           class="flex flex-col justify-center gap-5 md:gap-10 w-[100%] md:w-[50%]"
         >
-          <h3 class="text-4xl">
+          <h3 class="text-4xl translate" data-key="quote">
             «Скільки мов ти знаєш - стільки разів ти людина!»
           </h3>
           <div class="flex flex-col">
-            <h4 class="text-2xl">Олена Сідельнікова</h4>
-            <p>Людина мистецтва</p>
+            <h4 class="text-2xl translate" data-key="name">
+              Олена Сідельнікова
+            </h4>
+            <p class="translate" data-key="artPerson">Людина мистецтва</p>
           </div>
-          <p>Наставниця – Викладачка з міжнародним досвідом роботи</p>
-          <p>
+          <p class="translate" data-key="mentor">
+            Наставниця – Викладачка з міжнародним досвідом роботи
+          </p>
+          <p class="translate" data-key="vision">
             Моя бачення: Створити простір, де всі бажаючі можуть всебічно
             розвиватись завдяки мистецтву слова, мови та спілкування. Простір
             для самовираження. Де весело, цікаво та професійно!
           </p>
-          <button></button>
         </div>
         <div class="w-[100%] md:w-[50%]">
           <img
             class="rounded-lg object-cover max-h-[90vh] w-full object-top imgStyle z-0"
             src="./img/1.JPG"
-            alt=""
+            alt="Olena Sidelnikova"
           />
         </div>
       </section>
+
+      <!-- Блок 2: Услуги -->
       <section
         class="flex justify-center bg-gray-100 mt-[15vh] pt-[5vh] w-[100vw]"
         id="block2"
       >
         <div id="block2Sign">a</div>
-        <div class="flex flex-col items-center">
-          <h3 class="text-4xl text-center mb-5">Послуги</h3>
+        <div class="flex flex-col items-center w-full">
+          <h3 class="text-4xl text-center mb-5 translate" data-key="services">
+            Послуги
+          </h3>
           <div
             class="flex justify-around flex-wrap gap-5 max-w-[1000px] mx-[5vw] lg:mx-auto"
           >
+            <!-- Услуга 1: Розмовна англійська -->
             <div
               class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-100 dark:border-gray-300 block2child"
             >
@@ -152,17 +234,19 @@
                     <img
                       class="rounded-t-lg"
                       src="./img/cards/p-1.jpg"
-                      alt=""
+                      alt="Conversational English"
                     />
                   </a>
                   <div class="p-5">
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black"
+                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black translate"
+                      data-key="service1_title"
                     >
                       Розмовна англійська
                     </h5>
                     <p
-                      class="mb-3 font-normal text-gray-700 dark:text-gray-700"
+                      class="mb-3 font-normal text-gray-700 dark:text-gray-700 translate"
+                      data-key="service1_desc"
                     >
                       Індивідуальний урок з англійської. Тривалість 1 година.
                       Підходить тим у кого рівень pre intermediate,
@@ -175,21 +259,23 @@
                   </div>
                 </div>
                 <div class="p-5">
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    1 урок 1 год 1000гр
+                  <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+                    1 урок 1 год 1000грн
                   </p>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    4 уроки по 1 год 3600гр (900/урок)
+                    4 уроки по 1 год 3600грн (900/урок)
                   </p>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    8 уроків по 1 год 6400гр (800/урок)
-                  </p>
+                    8 уроків по 1 год 6400грн (800/урок)
+                  </p> -->
                   <a
                     href="https://wa.me/16315075646?text=Привіт%2C+Олена%21+На+вашому+сайті+побачив+курс+по+Розмовна+англійська&type=phone_number&app_absent=0"
                     target="_blank"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
                   >
-                    Замовити послугу
+                    <span class="translate" data-key="order_service"
+                      >Замовити послугу</span
+                    >
                     <svg
                       class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
@@ -209,6 +295,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Услуга 2: Англійська з особистим запитом -->
             <div
               class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-100 dark:border-gray-300 block2child"
             >
@@ -218,17 +306,19 @@
                     <img
                       class="rounded-t-lg"
                       src="./img/cards/p-2.jpg"
-                      alt=""
+                      alt="English with personal request"
                     />
                   </a>
                   <div class="p-5">
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black"
+                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black translate"
+                      data-key="service2_title"
                     >
                       Англійська з особистим запитом
                     </h5>
                     <p
-                      class="mb-3 font-normal text-gray-700 dark:text-gray-700"
+                      class="mb-3 font-normal text-gray-700 dark:text-gray-700 translate"
+                      data-key="service2_desc"
                     >
                       Індивідуальний урок англійської за вашим запитом.
                       Тривалість 1 година. Наприклад: підготувати до співбесіди
@@ -239,21 +329,23 @@
                   </div>
                 </div>
                 <div class="p-5">
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    1 урок 1 год 1000гр
+                  <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+                    1 урок 1 год 1000грн
                   </p>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    4 уроки по 1 год 3800гр (950/урок)
+                    4 уроки по 1 год 3800грн (950/урок)
                   </p>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    8 уроків по 1 год 7200гр (900/урок)
-                  </p>
+                    8 уроків по 1 год 7200грн (900/урок)
+                  </p> -->
                   <a
                     href="https://wa.me/16315075646?text=Привіт%2C+Олена%21+На+вашому+сайті+побачив+курс+по+Англійська+з+особистим+запитом&type=phone_number&app_absent=0"
                     target="_blank"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
                   >
-                    Замовити послугу
+                    <span class="translate" data-key="order_service"
+                      >Замовити послугу</span
+                    >
                     <svg
                       class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
@@ -273,22 +365,30 @@
                 </div>
               </div>
             </div>
+
+            <!-- Услуга 3: Script reading/speaking -->
             <div
               class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-100 dark:border-gray-300 block2child"
             >
               <div class="flex flex-col h-full justify-between">
                 <div>
                   <a href="#">
-                    <img class="rounded-t-lg" src="./img/3.jpg" alt="" />
+                    <img
+                      class="rounded-t-lg"
+                      src="./img/3.jpg"
+                      alt="Script reading"
+                    />
                   </a>
                   <div class="p-5">
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black"
+                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black translate"
+                      data-key="service3_title"
                     >
                       Script reading/speaking
                     </h5>
                     <p
-                      class="mb-3 font-normal text-gray-700 dark:text-gray-700"
+                      class="mb-3 font-normal text-gray-700 dark:text-gray-700 translate"
+                      data-key="service3_desc"
                     >
                       Читання сценаріїв відомих вистав та фільмів англійською
                       мовою по ролях. Читаємо і обговорюємо. Ця програма
@@ -301,15 +401,17 @@
                   </div>
                 </div>
                 <div class="p-5">
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+                  <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
                     300 грн/1 сесія
-                  </p>
+                  </p> -->
                   <a
                     href="https://wa.me/16315075646?text=Привіт%2C+Олена%21+На+вашому+сайті+побачив+курс+по+Script+reading/speaking&type=phone_number&app_absent=0"
                     target="_blank"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
                   >
-                    Замовити послугу
+                    <span class="translate" data-key="order_service"
+                      >Замовити послугу</span
+                    >
                     <svg
                       class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
@@ -329,6 +431,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Услуга 4: Китайська мова з нуля -->
             <div
               class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-100 dark:border-gray-300 block2child"
             >
@@ -338,17 +442,19 @@
                     <img
                       class="rounded-t-lg"
                       src="./img/cards/p-4.jpg"
-                      alt=""
+                      alt="Chinese from scratch"
                     />
                   </a>
                   <div class="p-5">
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black"
+                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black translate"
+                      data-key="service4_title"
                     >
                       Китайська мова з нуля
                     </h5>
                     <p
-                      class="mb-3 font-normal text-gray-700 dark:text-gray-700"
+                      class="mb-3 font-normal text-gray-700 dark:text-gray-700 translate"
+                      data-key="service4_desc"
                     >
                       Підходить для тих, хто хоче почати вчити китайську.
                       Тривалість 1 година. Буду вашим провідником у світ цікавої
@@ -357,21 +463,23 @@
                   </div>
                 </div>
                 <div class="p-5">
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    1 урок 1 год 1000гр
+                  <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+                    1 урок 1 год 1000грн
                   </p>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    4 уроки по 1 год 3600гр (900/урок)
+                    4 уроки по 1 год 3600грн (900/урок)
                   </p>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
-                    8 уроків по 1 год 6400гр (800/урок)
-                  </p>
+                    8 уроків по 1 год 6400грн (800/урок)
+                  </p> -->
                   <a
                     href="https://wa.me/16315075646?text=Привіт%2C+Олена%21+На+вашому+сайті+побачив+курс+по+Китайська+мова+з+нуля&type=phone_number&app_absent=0"
                     target="_blank"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
                   >
-                    Замовити послугу
+                    <span class="translate" data-key="order_service"
+                      >Замовити послугу</span
+                    >
                     <svg
                       class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
@@ -391,6 +499,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Услуга 5: Професійне резюме -->
             <div
               class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-100 dark:border-gray-300 block2child"
             >
@@ -400,17 +510,19 @@
                     <img
                       class="rounded-t-lg"
                       src="./img/cards/p-5.jpg"
-                      alt=""
+                      alt="Professional resume"
                     />
                   </a>
                   <div class="p-5">
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black"
+                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black translate"
+                      data-key="service5_title"
                     >
                       Професійне резюме
                     </h5>
                     <p
-                      class="mb-3 font-normal text-gray-700 dark:text-gray-700"
+                      class="mb-3 font-normal text-gray-700 dark:text-gray-700 translate"
+                      data-key="service5_desc"
                     >
                       Для тих, хто хоче професійно і стильного зарекомендувати
                       себе на ринку праці. Допоможу скоригувати існуюче резюме
@@ -419,15 +531,17 @@
                   </div>
                 </div>
                 <div class="p-5">
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+                  <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
                     1000грн
-                  </p>
+                  </p> -->
                   <a
                     href="https://wa.me/16315075646?text=Привіт%2C+Олена%21+На+вашому+сайті+побачив+курс+по+Професійне+резюме&type=phone_number&app_absent=0"
                     target="_blank"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
                   >
-                    Замовити послугу
+                    <span class="translate" data-key="order_service"
+                      >Замовити послугу</span
+                    >
                     <svg
                       class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
@@ -447,6 +561,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Услуга 6: Подарунковий сертифікат -->
             <div
               class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-100 dark:border-gray-300 block2child"
             >
@@ -456,17 +572,19 @@
                     <img
                       class="rounded-t-lg"
                       src="./img/cards/p-6.jpg"
-                      alt=""
+                      alt="Gift certificate"
                     />
                   </a>
                   <div class="p-5">
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black"
+                      class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black translate"
+                      data-key="service6_title"
                     >
                       Подарунковий сертифікат
                     </h5>
                     <p
-                      class="mb-3 font-normal text-gray-700 dark:text-gray-700"
+                      class="mb-3 font-normal text-gray-700 dark:text-gray-700 translate"
+                      data-key="service6_desc"
                     >
                       Подаруй корисний сертифікат: урок з англійської або
                       китайської; послуга «Професійне резюме»
@@ -474,7 +592,10 @@
                   </div>
                 </div>
                 <div class="p-5">
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">
+                  <p
+                    class="mb-3 font-normal text-gray-700 dark:text-gray-700 translate"
+                    data-key="service6_price"
+                  >
                     Ціна в залежності від послуги
                   </p>
                   <a
@@ -482,7 +603,9 @@
                     target="_blank"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700"
                   >
-                    Замовити послугу
+                    <span class="translate" data-key="order_service"
+                      >Замовити послугу</span
+                    >
                     <svg
                       class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
@@ -505,6 +628,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Блок 3: Обо мне -->
       <section id="block3" class="pt-[15vh]">
         <div
           class="flex flex-col md:flex-row gap-5 rounded-lg p-5 max-w-[1000px] mx-[5vw] lg:mx-auto bgForBlock"
@@ -515,14 +640,14 @@
             <img
               class="rounded-lg object-cover object-top max-h-[90vh] w-full imgStyle z-0"
               src="./img/2.JPG"
-              alt=""
+              alt="About me"
             />
           </div>
           <div
             class="flex flex-col justify-center gap-5 md:gap-10 w-[100%] md:w-[50%]"
           >
-            <h3 class="text-4xl">Про мене</h3>
-            <p>
+            <h3 class="text-4xl translate" data-key="about">Про мене</h3>
+            <p class="translate" data-key="aboutText">
               Дипломована викладачка і наставниця з англійської та китайської.
               Маю 8+ років міжнародного досвіду у викладанні іноземних мов дітям
               та дорослим, людям різного віку та соціального статусу з різними
@@ -531,27 +656,29 @@
               творчістю все своє життя. Зі мною ти оволодієш іноземною мовою і
               знайдеш бажану для себе роботу!
             </p>
-            <button></button>
           </div>
         </div>
       </section>
+
+      <!-- Блок 4: Образование и опыт -->
       <section id="block4" class="pt-[15vh]">
         <div
           class="flex flex-col gap-5 rounded-lg p-5 max-w-[1000px] mx-[5vw] lg:mx-auto bgForBlock"
         >
-          <h3 class="text-4xl text-center">Освіта і досвід</h3>
+          <h3 class="text-4xl text-center translate" data-key="education">
+            Освіта і досвід
+          </h3>
           <div class="flex flex-col lg:flex-row md:justify-between gap-5">
             <div
               class="flex flex-col justify-center gap-5 md:gap-10 w-[100%] lg:w-[32%]"
             >
-              <h4 class="text-xl">
+              <h4 class="text-xl translate" data-key="education1">
                 Київський національний лінгвістичний університет 2009-2013
               </h4>
-              <h4 class="text-xl">
+              <h4 class="text-xl translate" data-key="education2">
                 Курс підвищення кваліфікації з китайської мови (Хейлунцзянський
                 університет, м.Харбін) 2012, 2013
               </h4>
-              <button></button>
             </div>
             <div
               class="flex flex-col justify-center items-center w-[100%] lg:w-[32%]"
@@ -559,45 +686,46 @@
               <img
                 class="rounded-lg object-cover object-top max-h-[90vh] w-full imgStyle z-0"
                 src="./img/4.jpg"
-                alt=""
+                alt="Education"
               />
             </div>
             <div
               class="flex flex-col justify-center gap-5 md:gap-10 w-[100%] lg:w-[32%]"
             >
               <div class="flex flex-col justify-center">
-                <h4 class="text-xl">
+                <h4 class="text-xl translate" data-key="experience1">
                   14+ років роботи у міжнародних компаніях
                 </h4>
-                <h4 class="text-xl">
+                <h4 class="text-xl translate" data-key="experience2">
                   8+ років досвіду викладання іноземних мов
                 </h4>
               </div>
               <div class="flex flex-col justify-center">
-                <h4 class="text-xl">
+                <h4 class="text-xl translate" data-key="companiesTitle">
                   Працювала і співпрацювала з такими відомими компаніями як:
                 </h4>
                 <h4 class="text-xl">Qatar Airways</h4>
                 <h4 class="text-xl">Cartoon Network</h4>
                 <h4 class="text-xl">Marvel</h4>
               </div>
-              <button></button>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Блок 5: Контакты -->
       <section
         id="block5"
         class="flex flex-col pt-[15vh] items-center gap-5 rounded-lg p-5 max-w-[1000px] mx-[5vw] lg:mx-auto"
       >
-        <h3 class="text-3xl">Мої контакти</h3>
+        <h3 class="text-3xl translate" data-key="contacts">Мої контакти</h3>
         <div
           class="flex flex-col justify-center items-center w-[100%] lg:w-[32%]"
         >
           <img
             class="rounded-full object-cover w-[40vw] md:w-[30vw] imgStyle z-0"
             src="./img/ava.jpg"
-            alt=""
+            alt="Olena Sidelnikova"
           />
         </div>
         <div class="flex space-x-4">
@@ -609,7 +737,7 @@
             <img
               class="w-[10vw] md:w-[3vw] md:hover:bg-gray-100"
               src="./img/social/tm.png"
-              alt=""
+              alt="Telegram"
             />
           </a>
           <a
@@ -620,7 +748,7 @@
             <img
               class="w-[10vw] md:w-[3vw] hover:bg-gray-100"
               src="./img/social/ws.png"
-              alt=""
+              alt="WhatsApp"
             />
           </a>
           <a
@@ -631,7 +759,7 @@
             <img
               class="w-[10vw] md:w-[3vw] hover:bg-gray-100"
               src="./img/social/inst.png"
-              alt=""
+              alt="Instagram"
             />
           </a>
           <a
@@ -642,7 +770,7 @@
             <img
               class="w-[10vw] md:w-[3vw] hover:bg-gray-100"
               src="./img/social/gm.png"
-              alt=""
+              alt="Gmail"
             />
           </a>
           <a
@@ -653,44 +781,60 @@
             <img
               class="w-[10vw] md:w-[3vw] hover:bg-gray-100"
               src="./img/social/in.png"
-              alt=""
+              alt="LinkedIn"
             />
           </a>
         </div>
-        <h4 class="text-2xl mt-5">
-          Викладачка іноземних мов/Кар’єрний консультант
+        <h4 class="text-2xl mt-5 translate" data-key="teacher">
+          Викладачка іноземних мов/Кар'єрний консультант
         </h4>
       </section>
     </main>
 
+    <!-- Футер -->
     <footer class="bg-gray-100 border-gray-300 dark:bg-gray-100 w-[100vw] px-3">
       <div class="w-full max-w-[1000px] mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <a
             href="#"
             class="block py-2 md:border-0 md:hover:text-gray-200 md:p-0 dark:text-black md:dark:hover:text-gray-500 dark:hover:text-gray-200"
-            ><h1 class="text-xl">Olena Sidelnikova</h1></a
           >
+            <h1 class="text-xl translate" data-key="name">Olena Sidelnikova</h1>
+          </a>
           <ul
             class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
           >
             <li>
-              <a href="#block2Sign" class="hover:underline me-4 md:me-6"
+              <a
+                href="#block2Sign"
+                class="hover:underline me-4 md:me-6 translate"
+                data-key="services"
                 >Послуги</a
               >
             </li>
             <li>
-              <a href="#block3" class="hover:underline me-4 md:me-6"
+              <a
+                href="#block3"
+                class="hover:underline me-4 md:me-6 translate"
+                data-key="about"
                 >Про мене</a
               >
             </li>
             <li>
-              <a href="#block4" class="hover:underline me-4 md:me-6"
+              <a
+                href="#block4"
+                class="hover:underline me-4 md:me-6 translate"
+                data-key="education"
                 >Освіта і досвід</a
               >
             </li>
             <li>
-              <a href="#block5" class="hover:underline">Мої контакти</a>
+              <a
+                href="#block5"
+                class="hover:underline translate"
+                data-key="contacts"
+                >Мої контакти</a
+              >
             </li>
           </ul>
         </div>
@@ -698,9 +842,9 @@
           class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
         />
         <div class="flex justify-center gap-[3vw] my-8">
-          <img class="h-10" src="./img/pay/visa.svg" alt="" />
-          <img class="h-10" src="./img/pay/paypal.svg" alt="" />
-          <img class="h-10" src="./img/pay/mastercard.svg" alt="" />
+          <img class="h-10" src="./img/pay/visa.svg" alt="Visa" />
+          <img class="h-10" src="./img/pay/paypal.svg" alt="PayPal" />
+          <img class="h-10" src="./img/pay/mastercard.svg" alt="MasterCard" />
         </div>
         <span class="block text-sm text-gray-500 text-center dark:text-gray-400"
           >© 2025 All Rights Reserved.</span
