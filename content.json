@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "lastUpdated": "2024-01-15T10:00:00Z",
+    "version": "1.0.0"
+  },
+
+  "settings": {
+    "showPrices": {
+      "service1": true,
+      "service2": true,
+      "service3": false,
+      "service4": true,
+      "service5": true,
+      "service6": false
+    }
+  },
+
+  "content": {
+    "uk": {
+      "navigation": {
+        "services": "Послуги",
+        "about": "Про мене",
+        "education": "Освіта і досвід",
+        "contacts": "Мої контакти"
+      },
+
+      "hero": {
+        "name": "Олена Сідельнікова",
+        "artPerson": "Людина мистецтва",
+        "quote": "«Скільки мов ти знаєш - стільки разів ти людина!»",
+        "mentor": "Наставниця – Викладачка з міжнародним досвідом роботи",
+        "vision": "Моя бачення: Створити простір, де всі бажаючі можуть всебічно розвиватись завдяки мистецтву слова, мови та спілкування. Простір для самовираження. Де весело, цікаво та професійно!"
+      },
+
+      "services": {
+        "service1": {
+          "title": "Розмовна англійська",
+          "description": "Індивідуальний урок з англійської. Тривалість 1 година. Підходить тим у кого рівень pre intermediate, intermediate. Будемо розмовляти на різні теми, будете поповнювати словник активних слів, діставати з памʼяті раніше набутті знання і практикувати їх. Приємний, персоналізований, легкий та цікавий формат для підтримання та розвитку англійської",
+          "prices": [
+            "1 урок 1 год 1000грн",
+            "4 уроки по 1 год 3600грн (900/урок)",
+            "8 уроків по 1 год 6400грн (800/урок)"
+          ],
+          "whatsappMessage": "Привіт, Олена! На вашому сайті побачив курс по Розмовна англійська"
+        },
+        "service2": {
+          "title": "Англійська з особистим запитом",
+          "description": "Індивідуальний урок англійської за вашим запитом. Тривалість 1 година. Наприклад: підготувати до співбесіди на англійській або підготувати до конкретної події або роботи на англійській, запит на покращення конкретної теми у граматиці, інше",
+          "prices": [
+            "1 урок 1 год 1000грн",
+            "4 уроки по 1 год 3800грн (950/урок)",
+            "8 уроків по 1 год 7200грн (900/урок)"
+          ],
+          "whatsappMessage": "Привіт, Олена! На вашому сайті побачив курс по Англійська з особистим запитом"
+        },
+        "service3": {
+          "title": "Script reading/speaking",
+          "description": "Читання сценаріїв відомих вистав та фільмів англійською мовою по ролях. Читаємо і обговорюємо. Ця програма розрахована на 4 сесії, 1 раз на тиждень по 1 годині. Кожен місяць новий сценарій (історія). Мінімальна кількість людей - 3. Підходить для корисного і веселого проведення часу з друзями, колегам по роботі для team building…Підходить для рівня intermediate",
+          "prices": ["300 грн/1 сесія"],
+          "whatsappMessage": "Привіт, Олена! На вашому сайті побачив курс по Script reading/speaking"
+        },
+        "service4": {
+          "title": "Китайська мова з нуля",
+          "description": "Підходить для тих, хто хоче почати вчити китайську. Тривалість 1 година. Буду вашим провідником у світ цікавої китайської мови з самих простих, але дуже важливих азів",
+          "prices": [
+            "1 урок 1 год 1000грн",
+            "4 уроки по 1 год 3600грн (900/урок)",
+            "8 уроків по 1 год 6400грн (800/урок)"
+          ],
+          "whatsappMessage": "Привіт, Олена! На вашому сайті побачив курс по Китайська мова з нуля"
+        },
+        "service5": {
+          "title": "Професійне резюме",
+          "description": "Для тих, хто хоче професійно і стильного зарекомендувати себе на ринку праці. Допоможу скоригувати існуюче резюме під конкретну вакансію. Тривалість 30-45хвилин",
+          "prices": ["1000грн"],
+          "whatsappMessage": "Привіт, Олена! На вашому сайті побачив курс по Професійне резюме"
+        },
+        "service6": {
+          "title": "Подарунковий сертифікат",
+          "description": "Подаруй корисний сертифікат: урок з англійської або китайської; послуга «Професійне резюме»",
+          "prices": ["Ціна в залежності від послуги"],
+          "whatsappMessage": "Привіт, Олена! На вашому сайті побачив курс по Подарунковий сертифікат"
+        }
+      },
+
+      "about": {
+        "title": "Про мене",
+        "text": "Дипломована викладачка і наставниця з англійської та китайської. Маю 8+ років міжнародного досвіду у викладанні іноземних мов дітям та дорослим, людям різного віку та соціального статусу з різними запитами щодо вивчення мов. Я знаю як допомогти тобі почати думати і говорити англійською/китайською. Обожнюю творчість і займаюсь творчістю все своє життя. Зі мною ти оволодієш іноземною мовою і знайдеш бажану для себе роботу!"
+      },
+
+      "education": {
+        "title": "Освіта і досвід",
+        "education1": "Київський національний лінгвістичний університет 2009-2013",
+        "education2": "Курс підвищення кваліфікації з китайської мови (Хейлунцзянський університет, м.Харбін) 2012, 2013",
+        "experience1": "14+ років роботи у міжнародних компаніях",
+        "experience2": "8+ років досвіду викладання іноземних мов",
+        "companiesTitle": "Працювала і співпрацювала з такими відомими компаніями як:"
+      },
+
+      "contacts": {
+        "title": "Мої контакти",
+        "teacher": "Викладачка іноземних мов/Кар'єрний консультант"
+      },
+
+      "common": {
+        "order_service": "Замовити послугу"
+      }
+    },
+
+    "ru": {
+      "navigation": {
+        "services": "Услуги",
+        "about": "Обо мне",
+        "education": "Образование и опыт",
+        "contacts": "Мои контакты"
+      },
+      "hero": {
+        "name": "Алёна Сидельникова",
+        "artPerson": "Человек искусства",
+        "quote": "«Сколько языков ты знаешь – столько раз ты человек!»",
+        "mentor": "Наставница – преподаватель с международным опытом работы",
+        "vision": "Мое видение: Создать пространство, где каждый желающий может всесторонне развиваться благодаря искусству слова, языкам и общению. Пространство для самовыражения, где интересно, безопасно и профессионально."
+      },
+      "services": {
+        "service1": {
+          "title": "Разговорный английский",
+          "description": "Индивидуальный урок по английскому языку. Продолжительность 1 час. Подходит для тех, у кого уровень pre intermediate, intermediate. Будем разговаривать на разные темы, пополнять словарный запас активных слов, доставать из памяти ранее полученные знания и практиковать их. Приятный, персонализированный, легкий и интересный формат для поддержания и развития английского",
+          "prices": [
+            "1 урок 1 час 1000грн",
+            "4 урока по 1 час 3600грн (900/урок)",
+            "8 уроков по 1 час 6400грн (800/урок)"
+          ],
+          "whatsappMessage": "Привет, Алёна! На вашем сайте увидел курс по Разговорный английский"
+        },
+        "service2": {
+          "title": "Английский с персональным запросом",
+          "description": "Индивидуальный урок английского по вашему запросу. Продолжительность 1 час. Например: подготовка к собеседованию на английском или подготовка к конкретному событию или работе на английском, запрос на улучшение конкретной темы в граматике, другое",
+          "prices": [
+            "1 урок 1 час 1000грн",
+            "4 урока по 1 час 3800грн (950/урок)",
+            "8 уроков по 1 час 7200грн (900/урок)"
+          ],
+          "whatsappMessage": "Привет, Алёна! На вашем сайте увидел курс по Английский с персональным запросом"
+        },
+        "service3": {
+          "title": "Чтение сценариев",
+          "description": "Чтение сценариев известных спектаклей и фильмов на английском языке по ролям. Читаем и обсуждаем. Эта программа рассчитана на 4 сессии, 1 раз в неделю по 1 часу. Каждый месяц новый сценарий (история). Минимальное количество людей - 3. Подходит для полезного и веселого проведения времени с друзьями, коллегами по работе для тимбилдинга… Подходит для уровня intermediate",
+          "prices": ["300 грн/1 сессия"],
+          "whatsappMessage": "Привет, Алёна! На вашем сайте увидел курс по Чтение сценариев"
+        },
+        "service4": {
+          "title": "Китайский язык с нуля",
+          "description": "Подходит для тех, кто хочет начать учить китайский. Продолжительность 1 час. Буду вашим проводником в мир интересного китайского языка с самых простых, но очень важных азов",
+          "prices": [
+            "1 урок 1 час 1000грн",
+            "4 урока по 1 час 3600грн (900/урок)",
+            "8 уроков по 1 час 6400грн (800/урок)"
+          ],
+          "whatsappMessage": "Привет, Алёна! На вашем сайте увидел курс по Китайский язык с нуля"
+        },
+        "service5": {
+          "title": "Профессиональное резюме",
+          "description": "Для тех, кто хочет профессионально и стильно зарекомендовать себя на рынке труда. Помогу скорректировать существующее резюме под конкретную вакансию. Продолжительность 30-45 минут",
+          "prices": ["1000грн"],
+          "whatsappMessage": "Привет, Алёна! На вашем сайте увидел курс по Профессиональное резюме"
+        },
+        "service6": {
+          "title": "Подарочный сертификат",
+          "description": "Подари полезный сертификат: урок английского или китайского; услуга «Профессиональное резюме»",
+          "prices": ["Цена в зависимости от услуги"],
+          "whatsappMessage": "Привет, Алёна! На вашем сайте увидел курс по Подарочный сертификат"
+        }
+      },
+      "about": {
+        "title": "Обо мне",
+        "text": "Дипломированная преподавательница и наставница по изучению иностранных языков. 10+ лет международного опыта работы в преподавании детям и взрослым. TEFL сертифицированный преподаватель. Креативная, общительная и мотивирующая."
+      },
+      "education": {
+        "title": "Образование и опыт",
+        "education1": "Киевский Национальный Лингвистический Университет, 2009–2013",
+        "education2": "Курсы повышения квалификации по китайскому языку, Хейлунцзянский университет, г. Харбин, 2012–2013",
+        "experience1": "14 лет работы в международных компаниях",
+        "experience2": "10+ лет преподавания онлайн и офлайн",
+        "companiesTitle": "Сотрудничество с известными компаниями:"
+      },
+      "contacts": {
+        "title": "Мои контакты",
+        "teacher": "Преподаватель иностранных языков/Карьерный консультант"
+      },
+      "common": {
+        "order_service": "Заказать услугу"
+      }
+    },
+
+    "en": {
+      "navigation": {
+        "services": "Services",
+        "about": "About Me",
+        "education": "Education and Experience",
+        "contacts": "My Contacts"
+      },
+      "hero": {
+        "name": "Olena Sidelnikova",
+        "artPerson": "Art Person",
+        "quote": "«The more languages you know, the more human you are!»",
+        "mentor": "Mentor – a teacher with international experience",
+        "vision": "My vision: To create a space where anyone can develop holistically through the art of language, communication, and self-expression. A space where learning is interesting, safe, and professional."
+      },
+      "services": {
+        "service1": {
+          "title": "Conversational English",
+          "description": "Individual English lesson. Duration 1 hour. Suitable for those with pre-intermediate, intermediate level. We will talk on various topics, expand your active vocabulary, retrieve previously acquired knowledge from memory and practice it. Pleasant, personalized, easy and interesting format for maintaining and developing English",
+          "prices": [
+            "1 lesson 1 hour 1000 UAH",
+            "4 lessons 1 hour 3600 UAH (900/lesson)",
+            "8 lessons 1 hour 6400 UAH (800/lesson)"
+          ],
+          "whatsappMessage": "Hello, Olena! On your website I saw the course Conversational English"
+        },
+        "service2": {
+          "title": "English with personal request",
+          "description": "Individual English lesson according to your request. Duration 1 hour. For example: preparation for an interview in English or preparation for a specific event or work in English, request for improvement of a specific topic in grammar, other",
+          "prices": [
+            "1 lesson 1 hour 1000 UAH",
+            "4 lessons 1 hour 3800 UAH (950/lesson)",
+            "8 lessons 1 hour 7200 UAH (900/lesson)"
+          ],
+          "whatsappMessage": "Hello, Olena! On your website I saw the course English with personal request"
+        },
+        "service3": {
+          "title": "Script reading/speaking",
+          "description": "Reading scripts of famous plays and films in English by roles. We read and discuss. This program is designed for 4 sessions, 1 time per week for 1 hour. Each month a new script (story). Minimum number of people - 3. Suitable for useful and fun time with friends, work colleagues for team building... Suitable for intermediate level",
+          "prices": ["300 UAH/1 session"],
+          "whatsappMessage": "Hello, Olena! On your website I saw the course Script reading/speaking"
+        },
+        "service4": {
+          "title": "Chinese from scratch",
+          "description": "Suitable for those who want to start learning Chinese. Duration 1 hour. I will be your guide to the world of interesting Chinese language from the very simple but very important basics",
+          "prices": [
+            "1 lesson 1 hour 1000 UAH",
+            "4 lessons 1 hour 3600 UAH (900/lesson)",
+            "8 lessons 1 hour 6400 UAH (800/lesson)"
+          ],
+          "whatsappMessage": "Hello, Olena! On your website I saw the course Chinese from scratch"
+        },
+        "service5": {
+          "title": "Professional resume",
+          "description": "For those who want to professionally and stylishly present themselves in the job market. I will help adjust an existing resume for a specific vacancy. Duration 30-45 minutes",
+          "prices": ["1000 UAH"],
+          "whatsappMessage": "Hello, Olena! On your website I saw the course Professional resume"
+        },
+        "service6": {
+          "title": "Gift certificate",
+          "description": "Give a useful certificate: English or Chinese lesson; «Professional Resume» service",
+          "prices": ["Price depending on the service"],
+          "whatsappMessage": "Hello, Olena! On your website I saw the course Gift certificate"
+        }
+      },
+      "about": {
+        "title": "About Me",
+        "text": "Certified teacher and mentor in foreign language learning. 10+ years of international teaching experience with children and adults. TEFL-certified instructor. Creative, communicative, and motivating."
+      },
+      "education": {
+        "title": "Education and Experience",
+        "education1": "Kyiv National Linguistic University, 2009–2013",
+        "education2": "Advanced Chinese Language Courses, Heilongjiang University, Harbin, 2012–2013",
+        "experience1": "14 years of experience working in international companies",
+        "experience2": "10+ years of teaching online and offline",
+        "companiesTitle": "Collaboration with Well-Known Companies:"
+      },
+      "contacts": {
+        "title": "My Contacts",
+        "teacher": "Foreign Language Teacher/Career Consultant"
+      },
+      "common": {
+        "order_service": "Order service"
+      }
+    }
+  }
+}
